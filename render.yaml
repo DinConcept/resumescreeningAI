@@ -1,0 +1,10 @@
+# Render Blueprint - Static Site Deployment
+services:
+  - type: web
+    name: resume-screening-ai
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 20
